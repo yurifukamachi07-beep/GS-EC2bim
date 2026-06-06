@@ -53,11 +53,8 @@
     { "nivel": "CRÍTICO", "cor": "#ff4757", "descricao": "Parâmetro em zona de risco. Intervenção imediata necessária." }
   ],
   "equipe": [
-    { "nome": "Yuri Fukamachi",      "rm": "XXXXXX", "papel": "Edge Computing & IoT" },
-    { "nome": "Integrante 2",        "rm": "XXXXXX", "papel": "Front-End Design" },
-    { "nome": "Integrante 3",        "rm": "XXXXXX", "papel": "Web Development" },
-    { "nome": "Integrante 4",        "rm": "XXXXXX", "papel": "Python & Backend" },
-    { "nome": "Integrante 5",        "rm": "XXXXXX", "papel": "Software Design" }
+    { "nome": "Yuri Fukamachi",      "rm": "567314", "papel": "Edge Computing & IoT" },
+    { "nome": "Michel Benchimol",        "rm": "567345", "papel": "Front-End Design" }
   ],
   "faqs": [
     {
