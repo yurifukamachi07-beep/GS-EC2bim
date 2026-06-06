@@ -1,5 +1,13 @@
-# 🚀 Dragon Telemetry — React App (Web Development)
+# Dragon Telemetry 
 
+## Integrantes
+
+| Nome | RM |
+| Yuri Fukamachi     | 567314 |
+| Michel Benchimol   | 567345 |
+| André Rosa         | 567149 |
+
+**Turma:** 1ESPR 
 > **FIAP · Engenharia de Software · 1º Ano · Global Solution 2026**  
 > **Disciplina:** Web Development
 
@@ -7,7 +15,9 @@
 
 Aplicação React que serve como vitrine e dashboard para o sistema de telemetria da **Cápsula Dragon da SpaceX**. Conecta ao broker HiveMQ via MQTT/WebSocket para exibir dados de sensores em tempo real, com gráficos históricos e sistema de alertas visuais.
 
-## 🗂️ Estrutura
+Para a avaliação de Edge Computing e Computer Systems a aplicação se encontra na aba "Live"
+
+## Estrutura
 
 ```
 src/
@@ -30,10 +40,9 @@ src/
 └── index.css
 ```
 
-## ✅ Critérios de Avaliação Atendidos
+## Critérios de Avaliação Atendidos
 
 | Critério | Implementação |
-|----------|---------------|
 | **Cards com dados da ideia** | `SensorCard` renderiza dados do `dados.json` |
 | **JSON local** | `src/data/dados.json` — sensores, alertas, equipe, FAQ |
 | **React Router DOM** | 6 rotas: `/`, `/tecnologia`, `/objetivos`, `/beneficios`, `/aplicacao`, `/telemetria` |
@@ -42,7 +51,7 @@ src/
 | **Responsividade** | CSS Modules com breakpoints mobile-first |
 | **MQTT em tempo real** | Página `/telemetria` conecta ao HiveMQ via WSS |
 
-## ▶️ Instalação e Execução
+## Instalação e Execução
 
 ```bash
 # Instalar dependências
@@ -56,24 +65,9 @@ npm run dev
 npm run build
 ```
 
-> ⚠️ **node_modules não incluída no ZIP** conforme instrução do professor.
-
-## 🔗 Links
+## Links
 
 | Recurso | Link |
-|---------|------|
-| Repositório | `https://github.com/<usuario>/dragon-telemetry-react` |
-| Deploy | *(link após publicação na Vercel/Netlify)* |
+| Repositório | `https://github.com/yurifukamachi07-beep/GS-EC2bim.git` |
 | Wokwi | `https://wokwi.com/projects/465041969564807169` |
 
-## 👥 Integrantes
-
-| Nome | RM |
-|------|----|
-| Yuri Fukamachi     | XXXXXX |
-| Integrante 2       | XXXXXX |
-| Integrante 3       | XXXXXX |
-| Integrante 4       | XXXXXX |
-| Integrante 5       | XXXXXX |
-
-**Turma:** 1ESPR &nbsp;|&nbsp; **Período:** 25/05 – 09/06/2026
