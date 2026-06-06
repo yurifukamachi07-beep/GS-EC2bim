@@ -1,0 +1,83 @@
+.bCard {
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--bc) 25%, var(--border));
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color .3s, transform .3s, box-shadow .3s;
+}
+
+.bCard:hover {
+  border-color: var(--bc);
+  transform: translateY(-6px);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--bc) 20%, transparent);
+}
+
+.bValue {
+  font-family: var(--font-d);
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 900;
+  color: var(--bc);
+  text-shadow: 0 0 20px color-mix(in srgb, var(--bc) 40%, transparent);
+  line-height: 1;
+}
+
+.bLabel {
+  font-family: var(--font-d);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 8px 0 4px;
+}
+
+.bDesc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* Quote */
+.quote {
+  border-left: 3px solid var(--accent);
+  padding: 24px 32px;
+  background: var(--surface);
+  border-radius: 0 12px 12px 0;
+}
+
+.quote p {
+  font-family: var(--font-d);
+  font-size: clamp(14px, 2.2vw, 20px);
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.quote cite {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  font-style: normal;
+}
+
+/* Member */
+.memberCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color .3s;
+}
+
+.memberCard:hover { border-color: var(--accent); }
+
+.memberAvatar { font-size: 28px; }
+
+.memberName {
+  font-family: var(--font-d);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: .06em;
+}
+
+.memberRole { font-size: 12px; color: var(--accent); margin-top: 2px; }
+.memberRm   { font-size: 11px; color: var(--muted);  margin-top: 2px; font-family: var(--font-m); }

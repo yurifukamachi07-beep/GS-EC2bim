@@ -1,0 +1,55 @@
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { min-height: 100vh; -webkit-font-smoothing: antialiased; }
+img, svg { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+
+/* ── FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:wght@300;400;500&family=Share+Tech+Mono&display=swap');
+
+/* ── VARIABLES ── */
+:root {
+  --bg:         #05080f;
+  --surface:    #0a1020;
+  --surface2:   #0f1a2e;
+  --border:     #122040;
+  --accent:     #00c2ff;
+  --accent2:    #7b61ff;
+  --green:      #00e887;
+  --yellow:     #ffd24d;
+  --red:        #ff4757;
+  --text:       #c8ddf0;
+  --muted:      #4a6a8a;
+  --white:      #ffffff;
+  --nav-h:      64px;
+  --font-d:     'Orbitron', sans-serif;
+  --font-b:     'DM Sans', sans-serif;
+  --font-m:     'Share Tech Mono', monospace;
+  --ease:       cubic-bezier(.22,1,.36,1);
+  --glow-a:     0 0 20px rgba(0,194,255,.35);
+  --glow-v:     0 0 20px rgba(123,97,255,.35);
+}
+
+[data-theme="light"] {
+  --bg:       #f0f4fa;
+  --surface:  #ffffff;
+  --surface2: #e8eef8;
+  --border:   #c8d8ee;
+  --text:     #0d1a2e;
+  --muted:    #6a88aa;
+  --white:    #0d1a2e;
+}
+
+body {
+  font-family: var(--font-b);
+  background: var(--bg);
+  color: var(--text);
+  transition: background .3s, color .3s;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }

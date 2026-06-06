@@ -1,0 +1,104 @@
+.timeline { display: flex; flex-direction: column; gap: 0; }
+
+.goalItem {
+  display: flex;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+
+.goalItem:last-child { border-bottom: none; }
+
+.goalNum {
+  font-family: var(--font-d);
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: var(--accent);
+  min-width: 60px;
+  padding-top: 4px;
+}
+
+.goalBody { flex: 1; }
+
+.goalTitle {
+  font-family: var(--font-d);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+  letter-spacing: .04em;
+}
+
+.goalText {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(.22,1,.36,1);
+}
+
+.progressPct {
+  font-family: var(--font-d);
+  font-size: 11px;
+  color: var(--accent);
+  min-width: 34px;
+}
+
+/* Alert cards */
+.alertCard {
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--alert-color) 30%, var(--border));
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color .3s, transform .3s;
+}
+
+.alertCard:hover {
+  border-color: var(--alert-color);
+  transform: translateY(-4px);
+}
+
+.alertDot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--alert-color);
+  box-shadow: 0 0 10px var(--alert-color);
+}
+
+.alertTitle {
+  font-family: var(--font-d);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--alert-color);
+}
+
+.alertText {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}

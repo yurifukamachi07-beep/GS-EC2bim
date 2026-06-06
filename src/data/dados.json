@@ -1,0 +1,76 @@
+{
+  "projeto": {
+    "nome": "Dragon Telemetry",
+    "descricao": "Sistema de telemetria em tempo real para a Cápsula Dragon da SpaceX, usando ESP32, MQTT e dashboard web.",
+    "ods": ["ODS 9 — Inovação e Infraestrutura", "ODS 13 — Ação Climática"],
+    "ano": 2026,
+    "instituicao": "FIAP — Engenharia de Software"
+  },
+  "sensores": [
+    {
+      "id": "dht22",
+      "nome": "DHT22",
+      "icone": "🌡️",
+      "parametro": "Temperatura & Umidade",
+      "topico": "iot/dragon/temperatura",
+      "normal": "15–30 °C",
+      "alerta": ">30 ou <15 °C",
+      "critico": ">40 ou <5 °C",
+      "descricao": "Sensor digital de temperatura e umidade relativa. Resolução de 0.1 °C, preciso o suficiente para monitoramento de cabine tripulada."
+    },
+    {
+      "id": "bmp180",
+      "nome": "BMP180",
+      "icone": "🔵",
+      "parametro": "Pressão Barométrica",
+      "topico": "iot/dragon/pressao",
+      "normal": "≥ 950 hPa",
+      "alerta": "< 950 hPa",
+      "critico": "< 800 hPa",
+      "descricao": "Barômetro de alta precisão via protocolo I2C. Detecta variações graduais de pressão que podem indicar despressurização da cápsula."
+    },
+    {
+      "id": "mpu6050",
+      "nome": "MPU6050",
+      "icone": "⚡",
+      "parametro": "Força G (Acelerômetro)",
+      "topico": "iot/dragon/forcaG",
+      "normal": "≤ 2.0 G",
+      "alerta": "> 2.0 G",
+      "critico": "> 3.0 G",
+      "descricao": "Acelerômetro e giroscópio de 6 eixos. Mede a força gravitacional equivalente experimentada pelos tripulantes durante manobras e reentrada."
+    }
+  ],
+  "topicos_mqtt": [
+    { "topico": "iot/dragon/temperatura", "tipo": "float", "unidade": "°C" },
+    { "topico": "iot/dragon/pressao",     "tipo": "float", "unidade": "hPa" },
+    { "topico": "iot/dragon/forcaG",      "tipo": "float", "unidade": "G" },
+    { "topico": "iot/dragon/status",      "tipo": "string","unidade": "" }
+  ],
+  "alertas": [
+    { "nivel": "NORMAL",  "cor": "#00e887", "descricao": "Todos os parâmetros dentro dos limites operacionais." },
+    { "nivel": "ALERTA",  "cor": "#ffd24d", "descricao": "Um ou mais parâmetros próximos ao limiar crítico. Atenção recomendada." },
+    { "nivel": "CRÍTICO", "cor": "#ff4757", "descricao": "Parâmetro em zona de risco. Intervenção imediata necessária." }
+  ],
+  "equipe": [
+    { "nome": "Yuri Fukamachi",      "rm": "XXXXXX", "papel": "Edge Computing & IoT" },
+    { "nome": "Integrante 2",        "rm": "XXXXXX", "papel": "Front-End Design" },
+    { "nome": "Integrante 3",        "rm": "XXXXXX", "papel": "Web Development" },
+    { "nome": "Integrante 4",        "rm": "XXXXXX", "papel": "Python & Backend" },
+    { "nome": "Integrante 5",        "rm": "XXXXXX", "papel": "Software Design" }
+  ],
+  "faqs": [
+    {
+      "pergunta": "Por que MQTT e não HTTP?",
+      "resposta": "MQTT é um protocolo leve, criado para dispositivos IoT com recursos limitados. Latência muito menor que HTTP e suporte a reconexão automática — essencial em ambientes de missão."
+    },
+    {
+      "pergunta": "O sistema funciona sem internet?",
+      "resposta": "O ESP32 opera de forma autônoma: sensores, LEDs e buzzer respondem mesmo sem conexão. A transmissão ao dashboard requer conectividade, mas o alerta local é independente."
+    },
+    {
+      "pergunta": "Pode monitorar múltiplas cápsulas?",
+      "resposta": "Sim. A arquitetura MQTT suporta múltiplos publishers com tópicos distintos. O dashboard pode ser estendido para múltiplas instâncias com mínima modificação de código."
+    }
+  ]
+}

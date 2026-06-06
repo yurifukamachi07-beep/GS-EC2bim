@@ -1,0 +1,98 @@
+.steps { display: flex; flex-direction: column; }
+
+.step {
+  display: flex;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background .15s;
+}
+
+.step:last-child { border-bottom: none; }
+.step:hover { background: rgba(0,194,255,.015); }
+
+.stepNum {
+  font-family: var(--font-d);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 900;
+  color: var(--border);
+  line-height: 1;
+  min-width: 72px;
+  transition: color .3s, text-shadow .3s;
+}
+
+.step:hover .stepNum { color: var(--accent); text-shadow: var(--glow-a); }
+
+.stepBody { flex: 1; padding-top: 6px; }
+
+.stepTitle {
+  font-family: var(--font-d);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.stepText { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 60ch; }
+
+.stepTag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-family: var(--font-d);
+  font-size: 10px;
+  letter-spacing: .1em;
+  background: color-mix(in srgb, var(--tc) 12%, transparent);
+  color: var(--tc);
+}
+
+/* FAQ */
+.faqList { display: flex; flex-direction: column; gap: 2px; }
+
+.faqItem {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color .3s;
+}
+
+.faqOpen { border-color: var(--accent); }
+
+.faqQ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 18px 22px;
+  text-align: left;
+  font-family: var(--font-d);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--white);
+  gap: 12px;
+  transition: color .15s;
+}
+
+.faqQ:hover { color: var(--accent); }
+
+.faqArrow {
+  font-size: 20px;
+  color: var(--accent);
+  flex-shrink: 0;
+  font-family: var(--font-m);
+}
+
+.faqA {
+  padding: 0 22px 18px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 600px) {
+  .stepNum { min-width: 48px; font-size: 32px; }
+  .step { gap: 16px; }
+}

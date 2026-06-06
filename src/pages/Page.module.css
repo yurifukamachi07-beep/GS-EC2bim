@@ -1,0 +1,226 @@
+/* Shared page styles */
+.page { padding-top: var(--nav-h); min-height: 100vh; }
+
+/* Hero */
+.hero {
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,194,255,.05) 0%, transparent 70%);
+}
+
+.heroInner { max-width: 1200px; margin: 0 auto; width: 100%; }
+
+.heroHalf { min-height: 50vh; }
+
+.eyebrow {
+  font-family: var(--font-d);
+  font-size: 10px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-shadow: var(--glow-a);
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  font-family: var(--font-d);
+  font-size: clamp(36px, 7vw, 76px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--white);
+  max-width: 14ch;
+}
+
+.heroTitle em {
+  font-style: normal;
+  color: var(--accent);
+  text-shadow: var(--glow-a);
+}
+
+.heroSub {
+  margin-top: 20px;
+  font-size: clamp(14px, 2vw, 17px);
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 52ch;
+  line-height: 1.7;
+}
+
+.heroCta {
+  margin-top: 36px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: var(--font-d);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #000;
+  box-shadow: var(--glow-a);
+  transition: transform .15s, box-shadow .15s;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 32px rgba(0,194,255,.6);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: var(--font-d);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: border-color .15s, color .15s, transform .15s;
+}
+
+.btnGhost:hover {
+  border-color: var(--accent);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Section */
+.section {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader { margin-bottom: 40px; }
+
+.sectionLabel {
+  font-family: var(--font-d);
+  font-size: 10px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-family: var(--font-d);
+  font-size: clamp(22px, 4vw, 38px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.sectionDesc {
+  margin-top: 12px;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 60ch;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Grids */
+.grid3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.grid3 > * { flex: 1 1 260px; }
+
+.grid2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.grid2 > * { flex: 1 1 320px; }
+
+/* Stats */
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.statBlock {
+  flex: 1 1 180px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
+  transition: border-color .3s;
+}
+
+.statBlock:hover { border-color: var(--accent); }
+
+.statValue {
+  font-family: var(--font-d);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 900;
+  color: var(--accent);
+  text-shadow: var(--glow-a);
+  line-height: 1;
+}
+
+.statLabel {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ODS */
+.odsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.odsPill {
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-family: var(--font-d);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  color: #fff;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 60px 0;
+}
+
+@media (max-width: 768px) {
+  .hero, .section { padding: 60px 20px; }
+  .heroTitle { font-size: clamp(28px, 8vw, 48px); }
+  .heroCta { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 40px 16px; }
+  .section { padding: 48px 16px; }
+}
