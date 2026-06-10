@@ -64,10 +64,20 @@ npm run dev
 # Build para produção
 npm run build
 ```
+## Fotos
+
+case 1 
+![alt text](IMG/case1.png)
+![alt text](IMG/case1.2.png)
+
+case 2 (dados alterados)
+![alt text](IMG/case2.png)
+![alt text](IMG/case2.1.png)
 
 ## Links
 
 | Recurso | Link |
 | Repositório | `https://github.com/yurifukamachi07-beep/GS-EC2bim.git` |
 | Wokwi | `https://wokwi.com/projects/465041969564807169` |
+| StoryTelling | `https://youtu.be/QKYPPo92gOw` |
 
