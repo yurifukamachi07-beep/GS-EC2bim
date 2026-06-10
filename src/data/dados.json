@@ -54,7 +54,9 @@
   ],
   "equipe": [
     { "nome": "Yuri Fukamachi",      "rm": "567314", "papel": "Edge Computing & IoT" },
-    { "nome": "Michel Benchimol",        "rm": "567345", "papel": "Front-End Design" }
+    { "nome": "Michel Benchimol",        "rm": "567345", "papel": "Front-End Design" },
+    { "nome": "André Rosa",        "rm": "567149", "papel": "Backend Development" }
+
   ],
   "faqs": [
     {
